@@ -30,7 +30,7 @@ export default class BandsBandSongsController extends Controller {
     let song = await this.catalog.create(
       "song",
       { title: this.title },
-      { band: { data: { id: this.model.id, type: "bands" } } }
+      { band: { data: { id: this.model.id, type: "bands" } } },
     );
 
     this.model.songs = [...this.model.songs, song];
